@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1000]C:\Versioned\trunk\csharp\StringToNumber\StringToNumberUnitTests\StringToNumberUnitTests.nunit</TopNode>
+  <SelectedNode>[0-1184]StringToNumberUnitTests</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1000]C:\Versioned\trunk\csharp\StringToNumber\StringToNumberUnitTests\StringToNumberUnitTests.nunit" Expanded="true" />
+    <Node UniqueName="[0-1183]C:\Versioned\trunk\csharp\StringToNumber\StringToNumberUnitTests\bin\Debug\StringToNumberUnitTests.dll" Expanded="true" />
+    <Node UniqueName="[0-1184]StringToNumberUnitTests" Expanded="true" />
+    <Node UniqueName="[0-1186]StringToNumberUnitTests.I18n" Expanded="true" />
+    <Node UniqueName="[0-1185]StringToNumberUnitTests.Internals" Expanded="true" />
+    <Node UniqueName="[0-1041]StringToNumberUnitTests.Internals.ParseWords" Expanded="true" />
+    <Node UniqueName="[0-1055]StringToNumberUnitTests.TryParseByte" Expanded="true" />
+    <Node UniqueName="[0-1001]StringToNumberUnitTests.TryToByte" Expanded="true" />
+  </Nodes>
+</VisualState>

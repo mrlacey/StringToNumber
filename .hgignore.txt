@@ -18,7 +18,7 @@ syntax: glob
 *.tlb 
 *.tlh 
 *.bak 
-*.cache 
+*.[Cc]ache 
 *.ilk 
 *.log 
 *.lib 

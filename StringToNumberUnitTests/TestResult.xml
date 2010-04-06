@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Versioned\trunk\csharp\StringToNumber\StringToNumberUnitTests\StringToNumberUnitTests.nunit" total="165" errors="0" failures="0" not-run="3" inconclusive="0" ignored="3" skipped="0" invalid="0" date="2010-04-06" time="19:54:53">
+  <environment nunit-version="2.5.2.9222" clr-version="2.0.50727.4927" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.5.2\bin\net-2.0" machine-name="MATT-BLUE" user="Matt" user-domain="Matt-Blue" />
+  <culture-info current-culture="en-GB" current-uiculture="en-US" />
+  <test-suite name="C:\Versioned\trunk\csharp\StringToNumber\StringToNumberUnitTests\StringToNumberUnitTests.nunit" executed="True" success="True" time="0.714" asserts="0">
+    <results>
+      <test-suite name="C:\Versioned\trunk\csharp\StringToNumber\StringToNumberUnitTests\bin\Debug\StringToNumberUnitTests.dll" executed="True" success="True" time="0.688" asserts="0">
+        <results>
+          <test-suite name="StringToNumberUnitTests" executed="True" success="True" time="0.686" asserts="0">
+            <results>
+              <test-suite name="I18n" executed="True" success="True" time="0.024" asserts="0">
+                <results>
+                  <test-suite name="CultureFr" executed="True" success="True" time="0.010" asserts="0">
+                    <results>
+                      <test-case name="StringToNumberUnitTests.I18n.CultureFr.Five_Extension_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.I18n.CultureFr.MinusOne_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                      <test-case name="StringToNumberUnitTests.I18n.CultureFr.Zero_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="CultureFrNoSetup" executed="True" success="True" time="0.005" asserts="0">
+                    <results>
+                      <test-case name="StringToNumberUnitTests.I18n.CultureFrNoSetup.Five_Extension_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.I18n.CultureFrNoSetup.Five_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite name="Internals" executed="True" success="True" time="0.218" asserts="0">
+                <results>
+                  <test-suite name="ParseWords" executed="True" success="True" time="0.011" asserts="0">
+                    <results>
+                      <test-case name="StringToNumberUnitTests.Internals.ParseWords.D1_ParsesCorrectly" executed="True" success="True" time="0.000" asserts="3" />
+                      <test-case name="StringToNumberUnitTests.Internals.ParseWords.D500AndTwentyD7_ParsesCorrectly" executed="False">
+                        <reason>
+                          <message><![CDATA[Support for digits appearing twice in a sentence is not yet supported]]></message>
+                        </reason>
+                      </test-case>
+                      <test-case name="StringToNumberUnitTests.Internals.ParseWords.One_ParsesCorrectly" executed="True" success="True" time="0.000" asserts="3" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="WordPatternIsValid" executed="True" success="True" time="0.175" asserts="0">
+                    <results>
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.A_IsNotValidOnItsOwn" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.AA_IsNotValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.G_IsValid" executed="True" success="True" time="0.002" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.GAT_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.M_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.MM_IsNotValid" executed="True" success="True" time="0.002" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.MT_IsNotValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.MU_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.MUG_IsValid" executed="True" success="True" time="0.003" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.MUGMUGUGAMUGUGAMUGUGAT_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.N_IsNotValidOnItsOwn" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.NA_IsNotValid" executed="True" success="True" time="0.002" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.P_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.PP_IsNotValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.S_IsNotValid" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.SG_IsValid" executed="True" success="True" time="0.002" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.T_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.TA_IsNotValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.TAU_IsNotValid" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.TG_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.TM_IsNotValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.TT_IsNotValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.TU_IsNotValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.U_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.UA_IsNotValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.UAU_IsNotValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.UG_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.UGAM_IsValid" executed="True" success="True" time="0.002" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.UGAMUG_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.UGAT_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.UGAU_IsValid" executed="True" success="True" time="0.002" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.UGAUG_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.UGG_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.UGM_IsValid" executed="True" success="True" time="0.002" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.UGT_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.UGU_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.UT_IsNotValid" executed="True" success="True" time="0.002" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordPatternIsValid.UU_IsNotValid" executed="True" success="True" time="0.001" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="WordsToNumber" executed="True" success="True" time="0.016" asserts="0">
+                    <results>
+                      <test-case name="StringToNumberUnitTests.Internals.WordsToNumber.TryingToParseEmptyString_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordsToNumber.TryingToParseEmptyString_UsingTry_ReturnsZeroAndNoError" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordsToNumber.TryingToParseNull_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordsToNumber.TryingToParseNull_UsingTry_ReturnsZeroAndNoError" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordsToNumber.TryingToParseWhiteSpace_ReturnsError" executed="True" success="True" time="0.001" asserts="0" />
+                      <test-case name="StringToNumberUnitTests.Internals.WordsToNumber.TryingToParseWhiteSpace_UsingTry_ReturnsZeroAndNoError" executed="True" success="True" time="0.000" asserts="1" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite name="ToByte" executed="True" success="True" time="0.123" asserts="0">
+                <results>
+                  <test-case name="StringToNumberUnitTests.ToByte.AHundred_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.AnHundredAndFive_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.D1Hundred_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.D5_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.D5SpaceD5_IsNotValid" executed="True" success="True" time="0.002" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToByte.D5SpaceUnit_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToByte.FiftyFiveNoSpace_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.Five_Extension_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.Five_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.Hundred_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.HundredAndTwenty_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.HundredAndTwo_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.MinusOne_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToByte.OneHundred_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.OneHundredAndD15_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.OneHundredAndD5_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.OneHundredAndFifteen_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.OneHundredAndFive_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.OneHundredFifteen_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.OneHundredFive_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.SevenTen_IsNotValid" executed="True" success="True" time="0.002" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToByte.SevenThirteen_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToByte.SeventyFour_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.SeventyHyphenFour_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.Sixteen_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.Thirty_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.TwoHundredAndD55_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.TwoHundredAndFifty_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.TwoHundredAndFiftyFive_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.TwoHundredAndFiftySix_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToByte.TwoHundredD50_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.TwoHundredFifty_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.TwoHundredFiftyFive_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.UnitAnd_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToByte.UnitNegative_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToByte.UnitSingle_IsNotValid" executed="True" success="True" time="0.002" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToByte.UnitSpaceD5_IsNotValid" executed="True" success="True" time="0.002" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToByte.UnitSpaceUnit_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToByte.UnitTen_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToByte.UnitUnit_IsNotValid" executed="True" success="True" time="0.002" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToByte.Zero_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToByte.ZeroFive_IsNotValid" executed="True" success="True" time="0.001" asserts="0">
+                    <categories>
+                      <category name="Debatable" />
+                    </categories>
+                  </test-case>
+                </results>
+              </test-suite>
+              <test-suite name="ToInt" executed="True" success="True" time="0.078" asserts="0">
+                <results>
+                  <test-case name="StringToNumberUnitTests.ToInt.D1500_IsValid" executed="True" success="True" time="0.002" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt.D273000_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt.D500AndTwentyD7_IsNotValid" executed="False">
+                    <reason>
+                      <message><![CDATA[Support for digits appearing twice in a sentence is not yet supported]]></message>
+                    </reason>
+                  </test-case>
+                  <test-case name="StringToNumberUnitTests.ToInt.D500TwentyD7_IsNotValid" executed="False">
+                    <reason>
+                      <message><![CDATA[Support for digits appearing twice in a sentence is not yet supported]]></message>
+                    </reason>
+                  </test-case>
+                  <test-case name="StringToNumberUnitTests.ToInt.ElevenTwelve_IsNotValid" executed="True" success="True" time="0.002" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToInt.FifteenThousand_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt.FiftyFiveHundred_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt.FiftyHyphenFiveHundred_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt.FiftySpaceFiveHundred_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt.FiveHundredThousand_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt.FiveThousandHundred_IsNotValid" executed="True" success="True" time="0.002" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToInt.FourHundredAndTwentyThousand_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt.FourHundredThousand_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt.FourHundredThousandFiveHundred_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt.FourteenFour_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToInt.Million_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt.MinusThirtyTwoThousandSevenHundredAndSixtyNine_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt.MinusTwoBillionOneHundredAndFourtySevenMillionFourHundredAndEightyThreeThousandSixHundredAndFourtySeven_IsValid" executed="True" success="True" time="0.002" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt.SixteenAndFour_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToInt.SixteenFifty_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToInt.TwoBillionOneHundredAndFourtySevenMillionFourHundredAndEightyThreeThousandSixHundredAndFourtySeven" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt.TwoMillionThousand_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToInt.TwoThousandThousand_IsNotValid" executed="True" success="True" time="0.002" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite name="ToInt16" executed="True" success="True" time="0.023" asserts="0">
+                <results>
+                  <test-case name="StringToNumberUnitTests.ToInt16.Five_Extension_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt16.MinusOne_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt16.MinusThirtyTwoThousandSevenHundredAndSixtyEight_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt16.MinusThirtyTwoThousandSevenHundredAndSixtyNine_IsNotValid" executed="True" success="True" time="0.002" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToInt16.One_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt16.ThirtyTwoThousandSevenHundredAndSixtyEight_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToInt16.ThirtyTwoThousandSevenHundredAndSixtySeven_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt16.Zero_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite name="ToInt64" executed="True" success="True" time="0.059" asserts="0">
+                <results>
+                  <test-case name="StringToNumberUnitTests.ToInt64.EightHundredAndSevenBillion_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt64.EightHundredAndSevenBillionAndOne_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt64.EightHundredAndSixtyFourBillion_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt64.EightHundredSevenBillion_IsNotValid" executed="True" success="True" time="0.001" asserts="0">
+                    <categories>
+                      <category name="Debatable" />
+                    </categories>
+                  </test-case>
+                  <test-case name="StringToNumberUnitTests.ToInt64.EightMillionBillion_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt64.EightQuadrillion_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt64.EightyFiveTrillionCommaThirtyTwoBillionCommaSixHundredAndSeventyFourMillionCommaNineHundredAndNinetyNineThousandCommaSixHundredAndNineteen_Extension_IsValid" executed="True" success="True" time="0.003" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt64.EightyFiveTrillionCommaThirtyTwoBillionCommaSixHundredAndSeventyFourMillionCommaNineHundredAndNinetyNineThousandCommaSixHundredAndNineteen_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt64.SevenMillionThousand_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToInt64.TwoBillionAndSixMillion_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToInt64.TwoTrillionAndEighteen_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt64.TwoTrillionThreeBillionFourMillionFiveThousandSixHundred_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt64.ZeroMillion_IsNotValid" executed="True" success="True" time="0.001" asserts="0">
+                    <categories>
+                      <category name="Debatable" />
+                    </categories>
+                  </test-case>
+                </results>
+              </test-suite>
+              <test-suite name="ToInt64LongScale" executed="True" success="True" time="0.006" asserts="0">
+                <results>
+                  <test-case name="StringToNumberUnitTests.ToInt64LongScale.SixBillion_Extension_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToInt64LongScale.SixBillion_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite name="ToSByte" executed="True" success="True" time="0.035" asserts="0">
+                <results>
+                  <test-case name="StringToNumberUnitTests.ToSByte.DMinus1_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToSByte.FiftyTen_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToSByte.Five_Extension_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToSByte.MinusD1_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToSByte.MinusOne_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToSByte.MinusOneHundredAndTwentyEight_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToSByte.MinusOneHundredAndTwentyNine_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToSByte.NegativeOne_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToSByte.OneHundredAndTwentyEight_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToSByte.OneHundredAndTwentySeven_IsValid" executed="True" success="True" time="0.002" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToSByte.Zero_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite name="ToUInt16" executed="True" success="True" time="0.050" asserts="0">
+                <results>
+                  <test-case name="StringToNumberUnitTests.ToUInt16.FifteenThousand_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToUInt16.FifteenThousandAndThirtyFive_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToUInt16.FifteenThousandFiveHundred_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToUInt16.FifteenThousandFiveHundredAndThirtyFive_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToUInt16.FifteenThousandThirtyFive_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToUInt16.Five_Extension_IsValid" executed="True" success="True" time="0.002" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToUInt16.FiveThousand_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToUInt16.MinusOne_IsNotValid" executed="True" success="True" time="0.002" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToUInt16.MinusZero_IsNotValid" executed="True" success="True" time="0.002" asserts="0">
+                    <categories>
+                      <category name="Debatable" />
+                    </categories>
+                  </test-case>
+                  <test-case name="StringToNumberUnitTests.ToUInt16.SixtyFiveThousand_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToUInt16.SixtyFiveThousandFiveHundredAndThirtyFive_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToUInt16.SixtyFiveThousandFiveHundredAndThirtySix_IsNotValid" executed="True" success="True" time="0.001" asserts="0" />
+                  <test-case name="StringToNumberUnitTests.ToUInt16.SixtyThousand_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToUInt16.TenThousand_IsValid" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="StringToNumberUnitTests.ToUInt16.Zero_IsValid" executed="True" success="True" time="0.000" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite name="TryParseByte" executed="True" success="True" time="0.004" asserts="0">
+                <results>
+                  <test-case name="StringToNumberUnitTests.TryParseByte.Zero_IsValid" executed="True" success="True" time="0.000" asserts="2" />
+                </results>
+              </test-suite>
+              <test-suite name="TryToByte" executed="True" success="True" time="0.004" asserts="0">
+                <results>
+                  <test-case name="StringToNumberUnitTests.TryToByte.Zero_IsValid" executed="True" success="True" time="0.000" asserts="2" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

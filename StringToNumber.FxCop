@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="1.36" Name="StringToNumber">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">c:\program files (x86)\microsoft fxcop 1.36\Xml\FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded" NewOnly="False" />
+   <Report Status="Active" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="en-US" />
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>True</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+  <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
+ </ProjectOptions>
+ <Targets>
+  <Target Name="$(ProjectDir)/StringToNumber/bin/Debug/StringToNumber.dll" Analyze="True" AnalyzeAllChildren="True" />
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="1.36">
+  <Targets>
+   <Target Name="$(ProjectDir)/StringToNumber/bin/Debug/StringToNumber.dll">
+    <Modules>
+     <Module Name="stringtonumber.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2010-03-12 20:07:06Z">
+        <Issue Name="NoStrongName">
+         <Item>'StringToNumber.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="StringToNumber">
+        <Types>
+         <Type Name="NumberParser">
+          <Members>
+           <Member Name="#TryParse(System.String,System.Globalization.CultureInfo,StringToNumber.Scale,System.Int64&amp;)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'NumberParser.TryParse(string, CultureInfo, Scale, out long)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="culture" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'culture'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, Scale, out long)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="scale" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'scale'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, Scale, out long)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="toParse" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:53:03Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'toParse'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, Scale, out long)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TryParse(System.String,System.Globalization.CultureInfo,StringToNumber.Scale,System.UInt64&amp;)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'NumberParser.TryParse(string, CultureInfo, Scale, out ulong)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="culture" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'culture'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, Scale, out ulong)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="scale" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'scale'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, Scale, out ulong)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="toParse" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:53:03Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'toParse'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, Scale, out ulong)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TryParse(System.String,System.Globalization.CultureInfo,System.Byte&amp;)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out byte)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="culture" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'culture'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out byte)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="toParse" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:53:03Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'toParse'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out byte)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TryParse(System.String,System.Globalization.CultureInfo,System.Decimal&amp;)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out decimal)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="culture" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'culture'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out decimal)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="toParse" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:53:03Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'toParse'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out decimal)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TryParse(System.String,System.Globalization.CultureInfo,System.Double&amp;)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out double)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="culture" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'culture'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out double)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="toParse" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:53:03Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'toParse'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out double)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TryParse(System.String,System.Globalization.CultureInfo,System.Int16&amp;)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out short)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="culture" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'culture'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out short)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="toParse" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:53:03Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'toParse'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out short)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TryParse(System.String,System.Globalization.CultureInfo,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out int)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="culture" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'culture'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out int)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="toParse" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:53:03Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'toParse'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TryParse(System.String,System.Globalization.CultureInfo,System.SByte&amp;)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out sbyte)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="culture" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'culture'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out sbyte)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="toParse" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:53:03Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'toParse'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out sbyte)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TryParse(System.String,System.Globalization.CultureInfo,System.Single&amp;)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out float)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="culture" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'culture'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out float)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="toParse" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:53:03Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'toParse'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out float)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TryParse(System.String,System.Globalization.CultureInfo,System.UInt16&amp;)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out ushort)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="culture" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'culture'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out ushort)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="toParse" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:53:03Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'toParse'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out ushort)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TryParse(System.String,System.Globalization.CultureInfo,System.UInt32&amp;)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out uint)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="culture" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'culture'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out uint)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="toParse" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:53:03Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'toParse'</Item>
+               <Item>'NumberParser.TryParse(string, CultureInfo, out uint)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TryToLong(System.String,System.Globalization.CultureInfo,StringToNumber.Scale,System.Int64&amp;)">
+            <Messages>
+             <Message Id="scale" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:07:06Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'scale'</Item>
+               <Item>'NumberParser.TryToLong(string, CultureInfo, Scale, out long)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TryToULong(System.String,System.Globalization.CultureInfo,StringToNumber.Scale,System.UInt64&amp;)">
+            <Messages>
+             <Message Id="scale" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-03-12 20:59:45Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'scale'</Item>
+               <Item>'NumberParser.TryToULong(string, CultureInfo, Scale, out ulong)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Rules>
+   <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+    <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+    <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   </Rule>
+   <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+    <Resolution Name="Default">Parameter {0} of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>

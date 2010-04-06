@@ -1,0 +1,78 @@
+﻿
+////*sbyte = –128 to 127
+////*short = –32768 to 32767 
+////int = –2147483648 to 2147483647 
+////long = –9223372036854775808 to 9223372036854775807 
+////*byte = 0 to 255 
+////*ushort = 0 to 65535 
+////uint = 0 to 4294967295 
+////ulong = 0 to 18446744073709551615 
+////float = –1.5x10-45 to 3.4x1038     - ??? affected by scale 
+////double = –5.0x10-324 to 1.7x10308  - ??? affected by scale
+////decimal = 1.0x10-28 to 7.9x1028
+
+//// int     =                          +/- 2,147,483,647
+//// long    =              +/- 9,223,372,036,854,775,807 - affected by scale
+//// ulong   =            0 to 18,446,744,073,709,551,615 - affected by scale
+//// decimal = +/- 79,228,162,514,264,337,593,543,950,335 - affected by scale
+
+////* float: 7 decimal digits
+////* double: 15 decimal digits
+////* decimal: 30 decimal digits
+
+////# int.MaxValue + 1 == int.MinValue (it overflows and wraps around with no exception)
+////# uint.MaxValue + 1 == 0 (it overflows to zero since it is unsigned; no exception thrown)
+////# float.MaxValue + 1 == float.MaxValue (yes, the runtime handles the overflow, no exception is thrown, but it behaves differently than int and uint)
+////# double.MaxValue + 1 == double.MaxValue (same as float)
+////# decimal.MaxValue + 1 throws a System.OverflowException
+
+
+
+
+  // These numbers are SHORT SCALE (USA and Modern British) 
+  // rather than Long scale (Continental Europe and/or Traditional British)
+  //  : see http://en.wikipedia.org/wiki/Names_of_large_numbers
+
+  // numbers which are multipliers
+  //  these words on their own imply 'one' before then.  e.g. "hundred" is the same as "one hundred"
+  // G
+  ////this.groups.Add("HUNDRED", 100);
+  ////this.groups.Add("THOUSAND", 1000);
+  ////this.groups.Add("MILLION", 1000000);
+  ////this.groups.Add("BILLION", 1000000000); // 10^9 (Thousand million)
+  ////this.groups.Add("TRILLION", 1000000000000); // 10^12 (million million)
+  ////this.groups.Add("QUADRILLION", 1000000000000000); // 10^15 (thousand million million / million billion)
+  ////this.groups.Add("QUINTILLION", 1000000000000000000); // 10^18 (million million million / thousand quadrillion)
+
+  ////// these won't fit in a hashtable (or arraylist)
+  ////this.groups.Add("SEXTILLION",  1000000000000000000000M); // 10^21
+  ////// these won't fit in a ulong
+  ////this.groups.Add("SEPTILLION",  1000000000000000000000000M); // 10^24
+  ////this.groups.Add("OCTILLION",   1000000000000000000000000000M); // 10^27
+  ////// these won't fit in a decimal
+  ////this.groups.Add("NONILLION",   1000000000000000000000000000000); // 10^30
+  ////this.groups.Add("DECILLION",   1000000000000000000000000000000000); // 10^33
+
+  // int = +/-                              2,147,483,647
+  // long  =                +/- 9,223,372,036,854,775,807
+  // ulong =              0 to 18,446,744,073,709,551,615
+  // decimal = +/- 79,228,162,514,264,337,593,543,950,335
+
+  /*
+  // LONG SCALE
+  // G
+  this.groups.Add("HUNDRED",     100);
+  this.groups.Add("THOUSAND",    1000);
+  this.groups.Add("MILLION",     1000000);
+  this.groups.Add("MILLIARD",    1000000000); // 10^9 (Thousand million)
+  this.groups.Add("BILLION",     1000000000000); // 10^12 
+  this.groups.Add("BILLIARD",    1000000000000000); // 10^15 
+  this.groups.Add("TRILLION",    1000000000000000000); // 10^18 
+  // these won't fit in a hashtable (or arraylist)
+  this.groups.Add("TRILLIARD",   1000000000000000000000); // 10^21 
+  // these won't fit in a ulong
+  this.groups.Add("QUADRILLION", 1000000000000000000000000); // 10^24 
+  // these won't fit in a decimal
+  this.groups.Add("QUINTILLION", 1000000000000000000000000000000); // 10^30 
+  this.groups.Add("SEXTILLION",  1000000000000000000000000000000000000); // 10^36
+  */

@@ -1,0 +1,141 @@
+<sourceanalysisresultscache>
+  <version>9</version>
+  <project key="819782005">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
+  <sourcecode name="CultureFr.cs" parser="Microsoft.SourceAnalysis.CSharp.CsParser">
+    <settings>
+      <timestamp>04/06/2010 20:54:33</timestamp>
+      <milliseconds>855</milliseconds>
+    </settings>
+    <timestamp>04/06/2010 20:51:38</timestamp>
+    <milliseconds>195</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="CultureFrNoSetup.cs" parser="Microsoft.SourceAnalysis.CSharp.CsParser">
+    <settings>
+      <timestamp>04/06/2010 20:54:33</timestamp>
+      <milliseconds>855</milliseconds>
+    </settings>
+    <timestamp>04/06/2010 20:51:49</timestamp>
+    <milliseconds>620</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ParseWords.cs" parser="Microsoft.SourceAnalysis.CSharp.CsParser">
+    <settings>
+      <timestamp>04/06/2010 20:54:33</timestamp>
+      <milliseconds>855</milliseconds>
+    </settings>
+    <timestamp>04/06/2010 20:51:47</timestamp>
+    <milliseconds>940</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="WordsToNumber.cs" parser="Microsoft.SourceAnalysis.CSharp.CsParser">
+    <settings>
+      <timestamp>04/06/2010 20:54:33</timestamp>
+      <milliseconds>855</milliseconds>
+    </settings>
+    <timestamp>04/06/2010 20:50:25</timestamp>
+    <milliseconds>710</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="AssemblyInfo.cs" parser="Microsoft.SourceAnalysis.CSharp.CsParser">
+    <settings>
+      <timestamp>04/06/2010 20:54:33</timestamp>
+      <milliseconds>855</milliseconds>
+    </settings>
+    <timestamp>03/29/2010 22:36:30</timestamp>
+    <milliseconds>355</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="WordPatternIsValid.cs" parser="Microsoft.SourceAnalysis.CSharp.CsParser">
+    <settings>
+      <timestamp>04/06/2010 20:54:33</timestamp>
+      <milliseconds>855</milliseconds>
+    </settings>
+    <timestamp>03/29/2010 22:36:30</timestamp>
+    <milliseconds>807</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ToByte.cs" parser="Microsoft.SourceAnalysis.CSharp.CsParser">
+    <settings>
+      <timestamp>04/06/2010 20:54:33</timestamp>
+      <milliseconds>855</milliseconds>
+    </settings>
+    <timestamp>04/06/2010 20:51:49</timestamp>
+    <milliseconds>798</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ToInt.cs" parser="Microsoft.SourceAnalysis.CSharp.CsParser">
+    <settings>
+      <timestamp>04/06/2010 20:54:33</timestamp>
+      <milliseconds>855</milliseconds>
+    </settings>
+    <timestamp>04/06/2010 20:50:28</timestamp>
+    <milliseconds>466</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ToInt16.cs" parser="Microsoft.SourceAnalysis.CSharp.CsParser">
+    <settings>
+      <timestamp>04/06/2010 20:54:33</timestamp>
+      <milliseconds>855</milliseconds>
+    </settings>
+    <timestamp>04/06/2010 20:50:28</timestamp>
+    <milliseconds>413</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ToInt64LongScale.cs" parser="Microsoft.SourceAnalysis.CSharp.CsParser">
+    <settings>
+      <timestamp>04/06/2010 20:54:33</timestamp>
+      <milliseconds>855</milliseconds>
+    </settings>
+    <timestamp>04/06/2010 20:50:04</timestamp>
+    <milliseconds>755</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ToInt64.cs" parser="Microsoft.SourceAnalysis.CSharp.CsParser">
+    <settings>
+      <timestamp>04/06/2010 20:54:33</timestamp>
+      <milliseconds>855</milliseconds>
+    </settings>
+    <timestamp>04/06/2010 20:51:09</timestamp>
+    <milliseconds>859</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ToSByte.cs" parser="Microsoft.SourceAnalysis.CSharp.CsParser">
+    <settings>
+      <timestamp>04/06/2010 20:54:33</timestamp>
+      <milliseconds>855</milliseconds>
+    </settings>
+    <timestamp>04/06/2010 20:50:28</timestamp>
+    <milliseconds>603</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="TryParseByte.cs" parser="Microsoft.SourceAnalysis.CSharp.CsParser">
+    <settings>
+      <timestamp>04/06/2010 20:54:33</timestamp>
+      <milliseconds>855</milliseconds>
+    </settings>
+    <timestamp>04/06/2010 20:51:49</timestamp>
+    <milliseconds>924</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="TryToByte.cs" parser="Microsoft.SourceAnalysis.CSharp.CsParser">
+    <settings>
+      <timestamp>04/06/2010 20:54:33</timestamp>
+      <milliseconds>855</milliseconds>
+    </settings>
+    <timestamp>04/06/2010 20:50:03</timestamp>
+    <milliseconds>50</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ToUInt16.cs" parser="Microsoft.SourceAnalysis.CSharp.CsParser">
+    <settings>
+      <timestamp>04/06/2010 20:54:33</timestamp>
+      <milliseconds>855</milliseconds>
+    </settings>
+    <timestamp>04/06/2010 20:54:35</timestamp>
+    <milliseconds>325</milliseconds>
+    <violations />
+  </sourcecode>
+</sourceanalysisresultscache>

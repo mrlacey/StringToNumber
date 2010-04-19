@@ -295,31 +295,6 @@ namespace StringToNumber
         /// <summary>
         /// Converts the string to an Integer.
         /// </summary>
-        /// <param name="words">The words to convert.</param>
-        /// <param name="scale">The numeric scale to use in conversion</param>
-        /// <returns>The value as an int</returns>
-        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "int", Justification = "Deliberately also including type names to provide more usage options")]
-        public static int ToInt(this string words, Scale scale)
-        {
-            return new NumberParser(scale, CultureInfo.CurrentCulture).ToInt(words);
-        }
-
-        /// <summary>
-        /// Converts the string to an Integer.
-        /// </summary>
-        /// <param name="words">The words to convert.</param>
-        /// <param name="scale">The numeric scale to use in conversion</param>
-        /// <param name="culture">The culture identifying the language the words are written in.</param>
-        /// <returns>The value as an int</returns>
-        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "int", Justification = "Deliberately also including type names to provide more usage options")]
-        public static int ToInt(this string words, Scale scale, CultureInfo culture)
-        {
-            return new NumberParser(scale, CultureInfo.CurrentCulture).ToInt(words);
-        }
-
-        /// <summary>
-        /// Converts the string to an Integer.
-        /// </summary>
         /// <param name="words">The text to convert.</param>
         /// <param name="culture">The culture identifying the language the words are written in.</param>
         /// <returns>The value as an int</returns>

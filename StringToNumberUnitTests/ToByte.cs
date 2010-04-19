@@ -70,6 +70,28 @@ namespace StringToNumberUnitTests
             Assert.That(this.np.ToByte("zero five"), Is.EqualTo(5));
         }
 
+        [Test]
+        public void TryPass_Five_Passes()
+        {
+            byte actual;
+
+            var tryResult = this.np.TryToByte("five", out actual);
+
+            Assert.That(tryResult, Is.EqualTo(true));
+            Assert.That(actual, Is.EqualTo((byte)5));
+        }
+
+        [Test]
+        public void TryPass_ZeroFive_Fails()
+        {
+            byte actual;
+
+            var tryResult = this.np.TryToByte("zero five", out actual);
+
+            Assert.That(tryResult, Is.EqualTo(false));
+            Assert.That(actual, Is.EqualTo(default(byte)));
+        }
+
         [Test, ExpectedException(typeof(InvalidCastException))]
         public void SevenThirteen_IsNotValid()
         {

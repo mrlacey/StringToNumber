@@ -39,5 +39,29 @@ namespace StringToNumberUnitTests.I18n
         {
             Assert.That("cinq".ToByte(new CultureInfo("fr-FR")), Is.EqualTo((byte)5));
         }
+
+        [Test]
+        public void Five_Extension_ToSByte_IsValid()
+        {
+            Assert.That("cinq".ToSByte(new CultureInfo("fr-FR")), Is.EqualTo((sbyte)5));
+        }
+
+        [Test]
+        public void Five_Extension_ToShort_IsValid()
+        {
+            Assert.That("cinq".ToShort(new CultureInfo("fr-FR")), Is.EqualTo((short)5));
+        }
+
+        [Test]
+        public void Five_Extension_ToUShort_IsValid()
+        {
+            Assert.That("cinq".ToUShort(new CultureInfo("fr-FR")), Is.EqualTo((ushort)5));
+        }
+
+        [Test]
+        public void Five_Extension_ToInt_IsValid()
+        {
+            Assert.That("cinq".ToInt(new CultureInfo("fr-FR")), Is.EqualTo(5));
+        }
     }
 }

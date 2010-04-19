@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="NumberParser.ToMethods.cs" company="Matt Lacey (http://mrlacey.co.uk/)">
-//     Copyright © 2009 Matt Lacey
+//     Copyright © 2010 Matt Lacey
 //     All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------
@@ -27,6 +27,11 @@ namespace StringToNumber
         public UInt16 ToUInt16(string textToParse)
         {
             return Convert.ToUInt16(this.WordsToNumber(textToParse), this.converterCulture);
+        }
+
+        public uint ToUInt(string textToParse)
+        {
+            return Convert.ToUInt32(this.WordsToNumber(textToParse), this.converterCulture);
         }
 
         public UInt32 ToUInt32(string textToParse)

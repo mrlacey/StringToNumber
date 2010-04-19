@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ToUShort.cs" />
+    <Compile Include="ToUInt64.cs" />
+    <Compile Include="ToUInt32.cs" />
+    <Compile Include="ToUInt.cs" />
+    <Compile Include="ToLong.cs" />
+    <Compile Include="ToShort.cs" />
+    <Compile Include="ToInt32.cs" />
     <Compile Include="Internals\WordsToNumber.cs" />
     <Compile Include="ToInt64LongScale.cs" />
     <Compile Include="ToByte.cs" />
@@ -67,9 +74,6 @@
       <Project>{B57888CA-3018-4E5B-B631-1CC44194E232}</Project>
       <Name>StringToNumber</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Extensions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

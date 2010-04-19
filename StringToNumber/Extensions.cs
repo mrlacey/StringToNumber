@@ -79,6 +79,69 @@ namespace StringToNumber
         }
 
         /// <summary>
+        /// Converts the string to an unsigned 32bit Integer.
+        /// </summary>
+        /// <param name="words">The words to convert.</param>
+        /// <returns>The value as a UInt32</returns>
+        public static UInt32 ToUInt32(this string words)
+        {
+            return new NumberParser(CultureInfo.CurrentCulture).ToUInt32(words);
+        }
+
+        /// <summary>
+        /// Converts the string to an unsigned 32 bit Integer.
+        /// </summary>
+        /// <param name="words">The words to convert.</param>
+        /// <param name="culture">The culture identifying the language the words are written in.</param>
+        /// <returns>The value as a UInt32</returns>
+        public static UInt32 ToUInt32(this string words, CultureInfo culture)
+        {
+            return new NumberParser(culture).ToUInt32(words);
+        }
+
+        /// <summary>
+        /// Converts the string to an unsigned 32bit Integer.
+        /// </summary>
+        /// <param name="words">The words to convert.</param>
+        /// <returns>The value as a UInt</returns>
+        public static uint ToUInt(this string words)
+        {
+            return new NumberParser(CultureInfo.CurrentCulture).ToUInt(words);
+        }
+
+        /// <summary>
+        /// Converts the string to an unsigned 32 bit Integer.
+        /// </summary>
+        /// <param name="words">The words to convert.</param>
+        /// <param name="culture">The culture identifying the language the words are written in.</param>
+        /// <returns>The value as a UInt</returns>
+        public static uint ToUInt(this string words, CultureInfo culture)
+        {
+            return new NumberParser(culture).ToUInt(words);
+        }
+
+        /// <summary>
+        /// Converts the string to an unsigned 64bit Integer.
+        /// </summary>
+        /// <param name="words">The words to convert.</param>
+        /// <returns>The value as a UInt64</returns>
+        public static UInt64 ToUInt64(this string words)
+        {
+            return new NumberParser(CultureInfo.CurrentCulture).ToUInt64(words);
+        }
+
+        /// <summary>
+        /// Converts the string to an unsigned 64 bit Integer.
+        /// </summary>
+        /// <param name="words">The words to convert.</param>
+        /// <param name="culture">The culture identifying the language the words are written in.</param>
+        /// <returns>The value as a UInt64</returns>
+        public static UInt64 ToUInt64(this string words, CultureInfo culture)
+        {
+            return new NumberParser(culture).ToUInt64(words);
+        }
+
+        /// <summary>
         /// Converts the string to an unsigned short.
         /// </summary>
         /// <param name="words">The words to convert.</param>
@@ -164,29 +227,6 @@ namespace StringToNumber
         public static Int32 ToInt32(this string words, CultureInfo culture)
         {
             return new NumberParser(culture).ToInt32(words);
-        }
-
-        /// <summary>
-        /// Converts the string to a 32 bit Integer.
-        /// </summary>
-        /// <param name="words">The words to convert.</param>
-        /// <param name="scale">The numeric scale to use when interpreting large numbers.</param>
-        /// <returns>The value as an Int32</returns>
-        public static Int32 ToInt32(this string words, Scale scale)
-        {
-            return new NumberParser(scale, CultureInfo.CurrentCulture).ToInt32(words);
-        }
-
-        /// <summary>
-        /// Converts the string to a 32 bit Integer.
-        /// </summary>
-        /// <param name="words">The words to convert.</param>
-        /// <param name="scale">The numeric scale to use when interpreting large numbers.</param>
-        /// <param name="culture">The culture identifying the language the words are written in.</param>
-        /// <returns>The value as an Int32</returns>
-        public static Int32 ToInt32(this string words, Scale scale, CultureInfo culture)
-        {
-            return new NumberParser(scale, culture).ToInt32(words);
         }
 
         /// <summary>

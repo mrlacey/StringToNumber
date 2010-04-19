@@ -309,25 +309,11 @@ namespace StringToNumberManualTesting
                         {
                             if (string.IsNullOrEmpty(CultureToUse.Text))
                             {
-                                if (this.useShortScale.Checked)
-                                {
-                                    MessageBox.Show(StringToConvert.Text.ToInt(StringToNumber.Scale.Short, CultureInfo.CurrentCulture).ToString());
-                                }
-                                else
-                                {
-                                    MessageBox.Show(StringToConvert.Text.ToInt(StringToNumber.Scale.Long, CultureInfo.CurrentCulture).ToString());
-                                }
+                                MessageBox.Show(StringToConvert.Text.ToInt(CultureInfo.CurrentCulture).ToString());
                             }
                             else
                             {
-                                if (this.useShortScale.Checked)
-                                {
-                                    MessageBox.Show(StringToConvert.Text.ToInt(StringToNumber.Scale.Short, new CultureInfo(CultureToUse.Text)).ToString());
-                                }
-                                else
-                                {
-                                    MessageBox.Show(StringToConvert.Text.ToInt(StringToNumber.Scale.Long, new CultureInfo(CultureToUse.Text)).ToString());
-                                }
+                                MessageBox.Show(StringToConvert.Text.ToInt(new CultureInfo(CultureToUse.Text)).ToString());
                             }
                         }
 

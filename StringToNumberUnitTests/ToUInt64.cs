@@ -106,6 +106,18 @@ namespace StringToNumberUnitTests
             Assert.That(this.np.ToUInt64("sixty five thousand five hundred and thirty five"), Is.EqualTo(65535));
         }
 
+        [Test]
+        public void EightQuadrillion_ShortScale_IsValid()
+        {
+            Assert.That("Eight Quadrillion".ToUInt64(Scale.Short), Is.EqualTo(8000000000000000));
+        }
+
+        [Test]
+        public void EightThousandBillion_LongScale_IsValid()
+        {
+            Assert.That("Eight Thousand Billion".ToUInt64(Scale.Long), Is.EqualTo(8000000000000000));
+        }
+
         [Ignore("Currently not supporting anything larger than Int64.Max (9223372036854775807)")]
         [Test]
         public void EighteenQuintillion_IsValid()

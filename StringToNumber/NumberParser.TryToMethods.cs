@@ -149,6 +149,16 @@ namespace StringToNumber
             return this.TryParse(textToParse, CultureInfo.CurrentCulture, out result);
         }
 
+        public bool TryToUInt64(string textToParse, Scale scale, out UInt64 result)
+        {
+            return this.TryParse(textToParse, CultureInfo.CurrentCulture, scale, out result);
+        }
+
+        public bool TryToUInt64(string textToParse, CultureInfo culture, Scale scale, out UInt64 result)
+        {
+            return this.TryParse(textToParse, culture, out result);
+        }
+
         public bool TryToUInt64(string textToParse, CultureInfo culture, out UInt64 result)
         {
             return this.TryParse(textToParse, culture, out result);

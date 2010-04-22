@@ -101,6 +101,18 @@ namespace StringToNumberUnitTests
         }
 
         [Test]
+        public void EightQuadrillion_ShortScale_IsValid()
+        {
+            Assert.That("Eight Quadrillion".ToLong(Scale.Short), Is.EqualTo(8000000000000000));
+        }
+
+        [Test]
+        public void EightThousandBillion_LongScale_IsValid()
+        {
+            Assert.That("Eight Thousand Billion".ToLong(Scale.Long), Is.EqualTo(8000000000000000));
+        }
+
+        [Test]
         public void EightMillionBillion_IsValid()
         {
             // "million billion" is the same as quadrillion

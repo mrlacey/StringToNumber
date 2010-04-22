@@ -142,6 +142,29 @@ namespace StringToNumber
         }
 
         /// <summary>
+        /// Converts the string to an unsigned 64 bit Integer.
+        /// </summary>
+        /// <param name="words">The words to convert.</param>
+        /// <param name="scale">The numeric scale to use when interpreting large numbers.</param>
+        /// <returns>The value as an Int64</returns>
+        public static UInt64 ToUInt64(this string words, Scale scale)
+        {
+            return new NumberParser(scale, CultureInfo.CurrentCulture).ToUInt64(words);
+        }
+
+        /// <summary>
+        /// Converts the string to an unsigned 64 bit Integer.
+        /// </summary>
+        /// <param name="words">The words to convert.</param>
+        /// <param name="scale">The numeric scale to use when interpreting large numbers.</param>
+        /// <param name="culture">The culture identifying the language the words are written in.</param>
+        /// <returns>The value as an Int64</returns>
+        public static UInt64 ToUInt64(this string words, Scale scale, CultureInfo culture)
+        {
+            return new NumberParser(scale, culture).ToUInt64(words);
+        }
+
+        /// <summary>
         /// Converts the string to an unsigned short.
         /// </summary>
         /// <param name="words">The words to convert.</param>
@@ -345,7 +368,7 @@ namespace StringToNumber
         }
 
         /// <summary>
-        /// Converts the string to an Integer.
+        /// Converts the string to an unsigned long.
         /// </summary>
         /// <param name="words">The words to convert.</param>
         /// <param name="scale">The numeric scale to use when interpreting large numbers.</param>
@@ -357,7 +380,7 @@ namespace StringToNumber
         }
 
         /// <summary>
-        /// Converts the string to an Integer.
+        /// Converts the string to an unsigned long.
         /// </summary>
         /// <param name="words">The words to convert.</param>
         /// <param name="scale">The numeric scale to use when interpreting large numbers.</param>

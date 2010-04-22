@@ -63,5 +63,53 @@ namespace StringToNumberUnitTests.I18n
         {
             Assert.That("cinq".ToInt(new CultureInfo("fr-FR")), Is.EqualTo(5));
         }
+
+        [Test]
+        public void Five_Extension_ToInt16_IsValid()
+        {
+            Assert.That("cinq".ToInt16(new CultureInfo("fr-FR")), Is.EqualTo(5));
+        }
+
+        [Test]
+        public void Five_Extension_ToInt32_IsValid()
+        {
+            Assert.That("cinq".ToInt32(new CultureInfo("fr-FR")), Is.EqualTo(5));
+        }
+
+        [Test]
+        public void Five_Extension_ToInt64_IsValid()
+        {
+            Assert.That("cinq".ToInt64(new CultureInfo("fr-FR")), Is.EqualTo(5));
+        }
+
+        [Test]
+        public void Five_Extension_ToUInt_IsValid()
+        {
+            Assert.That("cinq".ToUInt(new CultureInfo("fr-FR")), Is.EqualTo(5));
+        }
+
+        [Test]
+        public void Five_Extension_ToUInt16_IsValid()
+        {
+            Assert.That("cinq".ToUInt16(new CultureInfo("fr-FR")), Is.EqualTo(5));
+        }
+
+        [Test]
+        public void Five_Extension_ToUInt32_IsValid()
+        {
+            Assert.That("cinq".ToUInt32(new CultureInfo("fr-FR")), Is.EqualTo(5));
+        }
+
+        [Test]
+        public void Five_Extension_ToUInt64_IsValid()
+        {
+            Assert.That("cinq".ToUInt64(new CultureInfo("fr-FR")), Is.EqualTo(5));
+        }
+
+        [Test]
+        public void Five_Extension_ToLong_IsValid()
+        {
+            Assert.That("cinq".ToLong(new CultureInfo("fr-FR")), Is.EqualTo(5));
+        }
     }
 }

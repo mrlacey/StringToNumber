@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExtendedConstructor.cs" />
     <Compile Include="ToUShort.cs" />
     <Compile Include="ToUInt64.cs" />
     <Compile Include="ToUInt32.cs" />

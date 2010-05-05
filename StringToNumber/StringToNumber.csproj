@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomWords.cs" />
     <Compile Include="NumberParser.TryParseMethods.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="NumberParser.ToMethods.cs" />
     <Compile Include="NumberParser.TryToMethods.cs" />
     <Compile Include="NumberParser.WordsToNumber.cs" />
+    <Compile Include="TypeOfWord.cs" />
     <Compile Include="WordType.cs" />
   </ItemGroup>
   <ItemGroup>

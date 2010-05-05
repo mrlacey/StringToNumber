@@ -92,8 +92,7 @@ namespace StringToNumber
         /// Scale defaults to 'Scale.Short'
         /// </summary>
         /// <param name="culture">The culture indicating the language of text to convert.</param>
-        public NumberParser(CultureInfo culture)
-            : this(Scale.Short, culture)
+        public NumberParser(CultureInfo culture): this(Scale.Short, culture, null)
         {
         }
 
@@ -102,7 +101,18 @@ namespace StringToNumber
         /// </summary>
         /// <param name="scale">The large number scale to use.</param>
         /// <param name="culture">The culture indicating the language of text to convert.</param>
-        public NumberParser(Scale scale, CultureInfo culture)
+        public NumberParser(Scale scale, CultureInfo culture) : this(scale, culture, null)
+        {
+        }
+
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NumberParser"/> class.
+        /// </summary>
+        /// <param name="scale">The large number scale to use.</param>
+        /// <param name="culture">The culture indicating the language of text to convert.</param>
+        /// <param name="customWords">Additional words to include as valid when processing.</param>
+        public NumberParser(Scale scale, CultureInfo culture, params CustomWords[] customWords)
         {
             this.converterCulture = culture;
 
@@ -193,6 +203,38 @@ namespace StringToNumber
                 string[] gutDetails = gav.Split(':');
                 this.groups.Add(gutDetails[0], Decimal.Parse(gutDetails[1], this.converterCulture));
             }
+
+            foreach (var custom in customWords)
+            {
+                switch (custom.WordType)
+                {
+                    case TypeOfWord.And:
+                        this.ands.Add(custom.Word.ToUpper(this.converterCulture));
+                        break;
+                    case TypeOfWord.Group:
+                        this.groups.Add(custom.Word.ToUpper(this.converterCulture), custom.Value);
+                        break;
+                    case TypeOfWord.MultipleOfTen:
+                        this.multiplesOfTen.Add(custom.Word.ToUpper(this.converterCulture), custom.Value);
+                        break;
+                    case TypeOfWord.Negative:
+                        this.negatives.Add(custom.Word);
+                        break;
+                    case TypeOfWord.Single:
+                        this.ones.Add(custom.Word.ToUpper(this.converterCulture));
+                        break;
+                    case TypeOfWord.Teen:
+                        this.teens.Add(custom.Word.ToUpper(this.converterCulture), custom.Value);
+                        break;
+                    case TypeOfWord.Unit:
+                        this.units.Add(custom.Word.ToUpper(this.converterCulture), custom.Value);
+                        break;
+                    case TypeOfWord.Zero:
+                        this.zeros.Add(custom.Word.ToUpper(this.converterCulture));
+                        break;
+                }
+            }
+
         }
     }
 }

@@ -92,7 +92,7 @@ namespace StringToNumber
         /// Scale defaults to 'Scale.Short'
         /// </summary>
         /// <param name="culture">The culture indicating the language of text to convert.</param>
-        public NumberParser(CultureInfo culture): this(Scale.Short, culture, null)
+        public NumberParser(CultureInfo culture) : this(Scale.Short, culture, null)
         {
         }
 
@@ -104,7 +104,6 @@ namespace StringToNumber
         public NumberParser(Scale scale, CultureInfo culture) : this(scale, culture, null)
         {
         }
-
 
         /// <summary>
         /// Initializes a new instance of the <see cref="NumberParser"/> class.

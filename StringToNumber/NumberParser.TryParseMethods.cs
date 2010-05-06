@@ -4,10 +4,10 @@
 //     All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------
-using System.Globalization;
-
 namespace StringToNumber
 {
+    using System;
+
     public partial class NumberParser
     {
         public bool TryParse(string textToParse, out sbyte result)

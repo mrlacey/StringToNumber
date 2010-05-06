@@ -149,6 +149,14 @@ namespace StringToNumberUnitTests
             Assert.That(this.np.ToInt("five thousand hundred"), Is.EqualTo(500000));
         }
 
+        public void TryFiveThousandHundred_HandlesInvalidCorrectly()
+        {
+            int value;
+
+            Assert.That(this.np.TryToInt("five thousand hundred", out value), Is.EqualTo(false));
+            Assert.That(value, Is.EqualTo(default(int)));
+        }
+
         [Test, ExpectedException(typeof(InvalidCastException))]
         public void TwoThousandThousand_IsNotValid()
         {

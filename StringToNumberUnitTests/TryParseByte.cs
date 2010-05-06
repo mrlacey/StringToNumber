@@ -30,5 +30,16 @@ namespace StringToNumberUnitTests
             Assert.That(result, Is.EqualTo(true));
             Assert.That(value, Is.EqualTo(0));
         }
+
+        [Test]
+        public void ZeroFive_IsInvalid()
+        {
+            byte value;
+
+            var result = this.np.TryParse("zero five", out value);
+
+            Assert.That(result, Is.EqualTo(false));
+            Assert.That(value, Is.EqualTo(default(byte)));
+        }
     }
 }

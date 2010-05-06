@@ -8,16 +8,9 @@ using System.Globalization;
 
 namespace StringToNumber
 {
-    // http://stackoverflow.com/questions/1166880/should-tryfoo-ever-throw-an-exception
-    // http://stackoverflow.com/questions/182440/tryparse-parse-like-pattern-what-is-the-best-way-to-implement-it
     public partial class NumberParser
     {
         public bool TryParse(string textToParse, out sbyte result)
-        {
-            return this.TryParse(textToParse, CultureInfo.CurrentCulture, out result);
-        }
-
-        public bool TryParse(string textToParse, CultureInfo culture, out sbyte result)
         {
             bool hadError;
             var parsed = this.WordsToNumber(textToParse, false, out hadError);
@@ -36,11 +29,6 @@ namespace StringToNumber
 
         public bool TryParse(string textToParse, out short result)
         {
-            return this.TryParse(textToParse, CultureInfo.CurrentCulture, out result);
-        }
-
-        public bool TryParse(string textToParse, CultureInfo culture, out short result)
-        {
             bool hadError;
             var parsed = this.WordsToNumber(textToParse, false, out hadError);
 
@@ -57,11 +45,6 @@ namespace StringToNumber
         }
 
         public bool TryParse(string textToParse, out int result)
-        {
-            return this.TryParse(textToParse, CultureInfo.CurrentCulture, out result);
-        }
-
-        public bool TryParse(string textToParse, CultureInfo culture, out int result)
         {
             bool hadError;
             var parsed = this.WordsToNumber(textToParse, false, out hadError);
@@ -80,21 +63,6 @@ namespace StringToNumber
 
         public bool TryParse(string textToParse, out long result)
         {
-            return this.TryParse(textToParse, CultureInfo.CurrentCulture, Scale.Short, out result);
-        }
-
-        public bool TryParse(string textToParse, CultureInfo culture, out long result)
-        {
-            return this.TryParse(textToParse, culture, Scale.Short, out result);
-        }
-
-        public bool TryParse(string textToParse, Scale scale, out long result)
-        {
-            return this.TryParse(textToParse, CultureInfo.CurrentCulture, scale, out result);
-        }
-
-        public bool TryParse(string textToParse, CultureInfo culture, Scale scale, out long result)
-        {
             bool hadError;
             var parsed = this.WordsToNumber(textToParse, false, out hadError);
 
@@ -111,11 +79,6 @@ namespace StringToNumber
         }
 
         public bool TryParse(string textToParse, out byte result)
-        {
-            return this.TryParse(textToParse, CultureInfo.CurrentCulture, out result);
-        }
-
-        public bool TryParse(string textToParse, CultureInfo culture, out byte result)
         {
             bool hadError;
             var parsed = this.WordsToNumber(textToParse, false, out hadError);
@@ -134,11 +97,6 @@ namespace StringToNumber
 
         public bool TryParse(string textToParse, out ushort result)
         {
-            return this.TryParse(textToParse, CultureInfo.CurrentCulture, out result);
-        }
-
-        public bool TryParse(string textToParse, CultureInfo culture, out ushort result)
-        {
             bool hadError;
             var parsed = this.WordsToNumber(textToParse, false, out hadError);
 
@@ -156,11 +114,6 @@ namespace StringToNumber
 
         public bool TryParse(string textToParse, out uint result)
         {
-            return this.TryParse(textToParse, CultureInfo.CurrentCulture, out result);
-        }
-
-        public bool TryParse(string textToParse, CultureInfo culture, out uint result)
-        {
             bool hadError;
             var parsed = this.WordsToNumber(textToParse, false, out hadError);
 
@@ -177,21 +130,6 @@ namespace StringToNumber
         }
 
         public bool TryParse(string textToParse, out ulong result)
-        {
-            return this.TryParse(textToParse, CultureInfo.CurrentCulture, Scale.Short, out result);
-        }
-
-        public bool TryParse(string textToParse, CultureInfo culture, out ulong result)
-        {
-            return this.TryParse(textToParse, culture, Scale.Short, out result);
-        }
-
-        public bool TryParse(string textToParse, Scale scale, out ulong result)
-        {
-            return this.TryParse(textToParse, CultureInfo.CurrentCulture, scale, out result);
-        }
-
-        public bool TryParse(string textToParse, CultureInfo culture, Scale scale, out ulong result)
         {
             // TODO: implement this - issue converting long to ulong :(
             result = 0; // default to zero (if returning false) 

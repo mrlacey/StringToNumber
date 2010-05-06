@@ -371,6 +371,29 @@ namespace StringToNumber
         /// Converts the string to an unsigned long.
         /// </summary>
         /// <param name="words">The words to convert.</param>
+        /// <returns>The value as a ulong</returns>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "ulong", Justification = "Deliberately also including type names to provide more usage options")]
+        public static ulong ToULong(this string words)
+        {
+            return new NumberParser(CultureInfo.CurrentCulture).ToULong(words);
+        }
+
+        /// <summary>
+        /// Converts the string to an unsigned long.
+        /// </summary>
+        /// <param name="words">The words to convert.</param>
+        /// <param name="culture">The culture identifying the language the words are written in.</param>
+        /// <returns>The value as a ulong</returns>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "ulong", Justification = "Deliberately also including type names to provide more usage options")]
+        public static ulong ToULong(this string words, CultureInfo culture)
+        {
+            return new NumberParser(culture).ToULong(words);
+        }
+
+        /// <summary>
+        /// Converts the string to an unsigned long.
+        /// </summary>
+        /// <param name="words">The words to convert.</param>
         /// <param name="scale">The numeric scale to use when interpreting large numbers.</param>
         /// <returns>The value as a ulong</returns>
         [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "ulong", Justification = "Deliberately also including type names to provide more usage options")]

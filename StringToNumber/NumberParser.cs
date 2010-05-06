@@ -204,37 +204,39 @@ namespace StringToNumber
                 this.groups.Add(gutDetails[0], Decimal.Parse(gutDetails[1], this.converterCulture));
             }
 
-            foreach (var custom in customWords)
+            if (customWords != null)
             {
-                switch (custom.WordType)
+                foreach (var custom in customWords)
                 {
-                    case TypeOfWord.And:
-                        this.ands.Add(custom.Word.ToUpper(this.converterCulture));
-                        break;
-                    case TypeOfWord.Group:
-                        this.groups.Add(custom.Word.ToUpper(this.converterCulture), custom.Value);
-                        break;
-                    case TypeOfWord.MultipleOfTen:
-                        this.multiplesOfTen.Add(custom.Word.ToUpper(this.converterCulture), custom.Value);
-                        break;
-                    case TypeOfWord.Negative:
-                        this.negatives.Add(custom.Word);
-                        break;
-                    case TypeOfWord.Single:
-                        this.ones.Add(custom.Word.ToUpper(this.converterCulture));
-                        break;
-                    case TypeOfWord.Teen:
-                        this.teens.Add(custom.Word.ToUpper(this.converterCulture), custom.Value);
-                        break;
-                    case TypeOfWord.Unit:
-                        this.units.Add(custom.Word.ToUpper(this.converterCulture), custom.Value);
-                        break;
-                    case TypeOfWord.Zero:
-                        this.zeros.Add(custom.Word.ToUpper(this.converterCulture));
-                        break;
+                    switch (custom.WordType)
+                    {
+                        case TypeOfWord.And:
+                            this.ands.Add(custom.Word.ToUpper(this.converterCulture));
+                            break;
+                        case TypeOfWord.Group:
+                            this.groups.Add(custom.Word.ToUpper(this.converterCulture), custom.Value);
+                            break;
+                        case TypeOfWord.MultipleOfTen:
+                            this.multiplesOfTen.Add(custom.Word.ToUpper(this.converterCulture), custom.Value);
+                            break;
+                        case TypeOfWord.Negative:
+                            this.negatives.Add(custom.Word);
+                            break;
+                        case TypeOfWord.Single:
+                            this.ones.Add(custom.Word.ToUpper(this.converterCulture));
+                            break;
+                        case TypeOfWord.Teen:
+                            this.teens.Add(custom.Word.ToUpper(this.converterCulture), custom.Value);
+                            break;
+                        case TypeOfWord.Unit:
+                            this.units.Add(custom.Word.ToUpper(this.converterCulture), custom.Value);
+                            break;
+                        case TypeOfWord.Zero:
+                            this.zeros.Add(custom.Word.ToUpper(this.converterCulture));
+                            break;
+                    }
                 }
             }
-
         }
     }
 }

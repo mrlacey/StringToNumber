@@ -16,7 +16,9 @@ namespace StringToNumber
         }
 
         public TypeOfWord WordType { get; set; }
+
         public string Word { get; set; }
+
         public long Value { get; set; }
     }
 }

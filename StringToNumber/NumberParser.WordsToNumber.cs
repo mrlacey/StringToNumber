@@ -7,6 +7,7 @@
 using System;
 using System.Collections;
 using System.Globalization;
+using System.Numerics;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -14,19 +15,19 @@ namespace StringToNumber
 {
     public partial class NumberParser
     {
-        internal Int64 WordsToNumber(string wordsNumber)
+        internal BigInteger WordsToNumber(string wordsNumber)
         {
             return this.WordsToNumber(wordsNumber, true);
         }
 
-        internal Int64 WordsToNumber(string wordsNumber, bool throwOnError)
+        internal BigInteger WordsToNumber(string wordsNumber, bool throwOnError)
         {
             bool notUsed;
 
             return this.WordsToNumber(wordsNumber, throwOnError, out notUsed);
         }
 
-        internal Int64 WordsToNumber(string wordsNumber, bool throwOnError, out bool suppressedErrorThrown)
+        internal BigInteger WordsToNumber(string wordsNumber, bool throwOnError, out bool suppressedErrorThrown)
         {
             if (wordsNumber == null)
             {
@@ -59,7 +60,7 @@ namespace StringToNumber
                 }
             }
 
-            if ((words.Length == 1) && (this.zeros.Contains(words[0])))
+            if ((words.Length == 1) && this.zeros.Contains(words[0]))
             {
                 // if only a single word
                 //   - this is the only scenario where zero is valid 
@@ -117,13 +118,13 @@ namespace StringToNumber
                         // work RtoL through pattern until reach G after a non G (but not an and) or end.
                         for (int i = patternOverOneHundred.Length - 1; i >= 0; i--)
                         {
-                            bool reachedEndOfPattern = (i == 0);
-                            bool reachedEndOfGroup = (reachedEndOfPattern ||
+                            bool reachedEndOfPattern = i == 0;
+                            bool reachedEndOfGroup = reachedEndOfPattern ||
                                 //// (thisGroup.Contains(WordType.Group.ToString()) & 
                                 //// (patternOverOneHundred[i] == WordType.And)) ||
                                                       ((patternOverOneHundred[i] != WordType.Group) &&
                                                        (patternOverOneHundred[i] != WordType.And) &&
-                                                       (patternOverOneHundred[i - 1] == WordType.Group)));
+                                                       (patternOverOneHundred[i - 1] == WordType.Group));
 
                             // build group
                             thisGroup = patternOverOneHundred[i] + thisGroup;
@@ -427,7 +428,7 @@ namespace StringToNumber
 
                     if (throwOnError)
                     {
-                        throw new InvalidCastException(String.Format(this.converterCulture, "'{0}' is unrecognised.", word));
+                        throw new InvalidCastException(String.Format(this.converterCulture, "'{0}' is unrecognized.", word));
                     }
                     else
                     {

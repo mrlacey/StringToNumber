@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringToNumber", "StringToNumber\StringToNumber.csproj", "{B57888CA-3018-4E5B-B631-1CC44194E232}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringToNumberUnitTests", "StringToNumberUnitTests\StringToNumberUnitTests.csproj", "{FA86C9F4-9E3E-43AF-B7E0-7CAECFDDC2FD}"

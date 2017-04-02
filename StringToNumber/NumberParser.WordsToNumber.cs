@@ -15,25 +15,25 @@ namespace StringToNumber
 {
     public partial class NumberParser
     {
-        internal BigInteger WordsToNumber(string wordsNumber)
+        internal long WordsToNumber(string wordsNumber)
         {
-            return this.WordsToNumber(wordsNumber, true);
+            return this.WordsToNumber(wordsNumber, throwOnError: true);
         }
 
-        internal BigInteger WordsToNumber(string wordsNumber, bool throwOnError)
+        internal long WordsToNumber(string wordsNumber, bool throwOnError)
         {
             bool notUsed;
 
             return this.WordsToNumber(wordsNumber, throwOnError, out notUsed);
         }
 
-        internal BigInteger WordsToNumber(string wordsNumber, bool throwOnError, out bool suppressedErrorThrown)
+        internal long WordsToNumber(string wordsNumber, bool throwOnError, out bool suppressedErrorThrown)
         {
             if (wordsNumber == null)
             {
                 if (throwOnError)
                 {
-                    throw new ArgumentNullException("wordsNumber");
+                    throw new ArgumentNullException(nameof(wordsNumber));
                 }
                 else
                 {
@@ -111,7 +111,7 @@ namespace StringToNumber
                                                    ? 1
                                                    : 0) - (wordPattern.StartsWith(WordType.Negative.ToString(), false, this.converterCulture) ? 1 : 0));
 
-                        string thisGroup = String.Empty;
+                        string thisGroup = string.Empty;
                         Int64 thisGroupAmount = 1;  // initialize to one so can multiply by group amounts correctly if no other multiplier provided
                         Int64 lastGroupAmount = 0;
 

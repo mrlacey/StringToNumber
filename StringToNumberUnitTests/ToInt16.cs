@@ -15,16 +15,18 @@ namespace StringToNumberUnitTests
     {
         private NumberParser np;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             this.np = new NumberParser();
         }
 
-        [Test, ExpectedException(typeof(OverflowException), ExpectedMessage = "Value was either too large or too small for an Int16.")]
+        [Test]
         public void MinusThirtyTwoThousandSevenHundredAndSixtyNine_IsNotValid()
         {
-            Assert.That(this.np.ToInt16("minus thirty two thousand seven hundred and sixty nine"), Is.EqualTo(-32769));
+            Assert.Throws(Is.TypeOf<OverflowException>().
+                          And.Message.EqualTo("Value was either too large or too small for an Int16."),
+                          () => this.np.ToInt16("minus thirty two thousand seven hundred and sixty nine"));
         }
 
         [Test]
@@ -63,10 +65,12 @@ namespace StringToNumberUnitTests
             Assert.That(this.np.ToInt16("thirty two thousand seven hundred and sixty seven"), Is.EqualTo(32767));
         }
 
-        [Test, ExpectedException(typeof(OverflowException), ExpectedMessage = "Value was either too large or too small for an Int16.")]
+        [Test]
         public void ThirtyTwoThousandSevenHundredAndSixtyEight_IsNotValid()
         {
-            Assert.That(this.np.ToInt16("thirty two thousand seven hundred and sixty eight"), Is.EqualTo(32768));
+            Assert.Throws(Is.TypeOf<OverflowException>().
+                          And.Message.EqualTo("Value was either too large or too small for an Int16."),
+                          () => this.np.ToInt16("thirty two thousand seven hundred and sixty eight"));
         }
     }
 }

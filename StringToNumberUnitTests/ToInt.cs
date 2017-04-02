@@ -15,7 +15,7 @@ namespace StringToNumberUnitTests
     {
         private NumberParser np;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             this.np = new NumberParser();
@@ -59,10 +59,11 @@ namespace StringToNumberUnitTests
             Assert.That(this.np.ToInt("minus thirty two thousand seven hundred and sixty nine"), Is.EqualTo(-32769));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void SixteenAndFour_IsNotValid()
         {
-            Assert.That(this.np.ToInt("sixteen and four"), Is.EqualTo(164));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToInt("sixteen and four"));
         }
 
         [Test]
@@ -71,22 +72,25 @@ namespace StringToNumberUnitTests
             Assert.That("fifty".ToInt(), Is.EqualTo(50));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void SixteenFifty_IsNotValid()
         {
-            Assert.That(this.np.ToInt("sixteen fifty"), Is.EqualTo(1650));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToInt("sixteen fifty"));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void FourteenFour_IsNotValid()
         {
-            Assert.That(this.np.ToInt("fourteen four"), Is.EqualTo(144));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToInt("fourteen four"));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void ElevenTwelve_IsNotValid()
         {
-            Assert.That(this.np.ToInt("eleven twelve"), Is.EqualTo(17));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToInt("eleven twelve"));
         }
 
         [Test]
@@ -143,10 +147,11 @@ namespace StringToNumberUnitTests
             Assert.That(this.np.ToInt("fiftyfive hundred"), Is.EqualTo(5500));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void FiveThousandHundred_IsNotValid()
         {
-            Assert.That(this.np.ToInt("five thousand hundred"), Is.EqualTo(500000));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToInt("five thousand hundred"));
         }
 
         public void TryFiveThousandHundred_HandlesInvalidCorrectly()
@@ -157,16 +162,18 @@ namespace StringToNumberUnitTests
             Assert.That(value, Is.EqualTo(default(int)));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void TwoThousandThousand_IsNotValid()
         {
-            Assert.That(this.np.ToInt("two thousand thousand"), Is.EqualTo(2000000));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToInt("two thousand thousand"));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void TwoMillionThousand_IsNotValid()
         {
-            Assert.That(this.np.ToInt("two million thousand"), Is.EqualTo(2000000000));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToInt("two million thousand"));
         }
 
         [Test]

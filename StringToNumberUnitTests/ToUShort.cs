@@ -15,23 +15,26 @@ namespace StringToNumberUnitTests
     {
         private NumberParser np;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             this.np = new NumberParser();
         }
 
-        [Test, ExpectedException(typeof(OverflowException), ExpectedMessage = "Value was either too large or too small for a UInt16.")]
+        [Test]
         public void MinusOne_IsNotValid()
         {
-            Assert.That(this.np.ToUShort("minus one"), Is.EqualTo(-1));
+            Assert.Throws(Is.TypeOf<OverflowException>().
+                          And.Message.EqualTo("Value was either too large or too small for a UInt16."),
+                          () => this.np.ToUShort("minus one"));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         [Category("Debatable")]
         public void MinusZero_IsNotValid()
         {
-            Assert.That(this.np.ToUShort("minus zero"), Is.EqualTo(-0));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToUShort("minus zero"));
         }
 
         [Test]
@@ -106,10 +109,12 @@ namespace StringToNumberUnitTests
             Assert.That(this.np.ToUShort("sixty five thousand five hundred and thirty five"), Is.EqualTo(65535));
         }
 
-        [Test, ExpectedException(typeof(OverflowException), ExpectedMessage = "Value was either too large or too small for a UInt16.")]
+        [Test]
         public void SixtyFiveThousandFiveHundredAndThirtySix_IsNotValid()
         {
-            Assert.That(this.np.ToUShort("sixty five thousand five hundred and thirty six"), Is.EqualTo(65536));
+            Assert.Throws(Is.TypeOf<OverflowException>().
+                          And.Message.EqualTo("Value was either too large or too small for a UInt16."),
+                          () => this.np.ToUShort("sixty five thousand five hundred and thirty six"));
         }
     }
 }

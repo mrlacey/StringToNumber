@@ -15,28 +15,31 @@ namespace StringToNumberUnitTests.Internals
     {
         private NumberParser np;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             this.np = new NumberParser();
         }
 
-        [Test, ExpectedException(typeof(ArgumentNullException))]
+        [Test]
         public void TryingToParseNull_IsNotValid()
         {
-            var err = this.np.WordsToNumber(null);
+            Assert.Throws<ArgumentNullException>(
+                  () => this.np.WordsToNumber(null));
         }
 
-        [Test, ExpectedException(typeof(ArgumentException))]
+        [Test]
         public void TryingToParseEmptyString_IsNotValid()
         {
-            var err = this.np.WordsToNumber(string.Empty);
+            Assert.Throws<ArgumentException>(
+                  () => this.np.WordsToNumber(string.Empty));
         }
 
-        [Test, ExpectedException(typeof(ArgumentException))]
+        [Test]
         public void TryingToParseWhiteSpace_ReturnsError()
         {
-            var err = this.np.WordsToNumber(" ");
+            Assert.Throws<ArgumentException>(
+                  () => this.np.WordsToNumber(" "));
         }
 
         [Test]

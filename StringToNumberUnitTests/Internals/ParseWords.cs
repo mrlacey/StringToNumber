@@ -15,7 +15,7 @@ namespace StringToNumberUnitTests.Internals
     {
         private NumberParser np;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             this.np = new NumberParser();
@@ -24,15 +24,12 @@ namespace StringToNumberUnitTests.Internals
         [Test]
         public void One_ParsesCorrectly()
         {
-            string[] words = new[] { "ONE" };
-            string pattern;
-            ArrayList parsedWords;
-            ArrayList numerics;
+            var words = new[] { "ONE" };
 
-            this.np.ParseWords(words, false, out pattern, out parsedWords, out numerics);
+            this.np.ParseWords(words, false, out string pattern, out ArrayList parsedWords, out ArrayList numerics);
 
-            ArrayList expectedParsedWords = new ArrayList { "ONE" };
-            ArrayList expectedNumerics = new ArrayList();
+            var expectedParsedWords = new ArrayList { "ONE" };
+            var expectedNumerics = new ArrayList();
 
             Assert.That(pattern, Is.EqualTo("U"));
             Assert.That(parsedWords, Is.EqualTo(expectedParsedWords));
@@ -42,15 +39,12 @@ namespace StringToNumberUnitTests.Internals
         [Test]
         public void D1_ParsesCorrectly()
         {
-            string[] words = new[] { "1" };
-            string pattern;
-            ArrayList parsedWords;
-            ArrayList numerics;
+            var words = new[] { "1" };
 
-            this.np.ParseWords(words, false, out pattern, out parsedWords, out numerics);
+            this.np.ParseWords(words, false, out string pattern, out ArrayList parsedWords, out ArrayList numerics);
 
-            ArrayList expectedParsedWords = new ArrayList { "1" };
-            ArrayList expectedNumerics = new ArrayList();
+            var expectedParsedWords = new ArrayList { "1" };
+            var expectedNumerics = new ArrayList();
 
             Assert.That(pattern, Is.EqualTo("U"));
             Assert.That(parsedWords, Is.EqualTo(expectedParsedWords));
@@ -61,17 +55,14 @@ namespace StringToNumberUnitTests.Internals
         [Ignore("Support for digits appearing twice in a sentence is not yet supported")]
         public void D500AndTwentyD7_ParsesCorrectly()
         {
-            string[] words = new[] { "500", "AND", "TWENTY", "7" };
-            string pattern;
-            ArrayList parsedWords;
-            ArrayList numerics;
+            var words = new[] { "500", "AND", "TWENTY", "7" };
 
-            this.np.ParseWords(words, false, out pattern, out parsedWords, out numerics);
+            this.np.ParseWords(words, false, out string pattern, out ArrayList parsedWords, out ArrayList numerics);
 
-            ArrayList expectedParsedWords = new ArrayList { "500", "AND", "TWENTY", "7" };
+            var expectedParsedWords = new ArrayList { "500", "AND", "TWENTY", "7" };
 
             // This isn't valid
-            ArrayList expectedNumerics = new ArrayList { 500, 0, 0, 7 };
+            var expectedNumerics = new ArrayList { 500, 0, 0, 7 };
 
             Assert.That(pattern, Is.EqualTo("PAMU"));
             Assert.That(parsedWords, Is.EqualTo(expectedParsedWords));

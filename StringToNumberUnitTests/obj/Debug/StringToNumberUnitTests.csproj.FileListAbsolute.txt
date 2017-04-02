@@ -1,0 +1,10 @@
+C:\Users\matt\Documents\GitHub\StringToNumber\StringToNumberUnitTests\obj\Debug\StringToNumberUnitTests.csprojResolveAssemblyReference.cache
+C:\Users\matt\Documents\GitHub\StringToNumber\StringToNumberUnitTests\bin\Debug\StringToNumberUnitTests.dll
+C:\Users\matt\Documents\GitHub\StringToNumber\StringToNumberUnitTests\bin\Debug\StringToNumberUnitTests.pdb
+C:\Users\matt\Documents\GitHub\StringToNumber\StringToNumberUnitTests\bin\Debug\nunit.framework.dll
+C:\Users\matt\Documents\GitHub\StringToNumber\StringToNumberUnitTests\bin\Debug\StringToNumber.dll
+C:\Users\matt\Documents\GitHub\StringToNumber\StringToNumberUnitTests\bin\Debug\StringToNumber.pdb
+C:\Users\matt\Documents\GitHub\StringToNumber\StringToNumberUnitTests\bin\Debug\nunit.framework.xml
+C:\Users\matt\Documents\GitHub\StringToNumber\StringToNumberUnitTests\bin\Debug\fr\StringToNumber.resources.dll
+C:\Users\matt\Documents\GitHub\StringToNumber\StringToNumberUnitTests\obj\Debug\StringToNumberUnitTests.dll
+C:\Users\matt\Documents\GitHub\StringToNumber\StringToNumberUnitTests\obj\Debug\StringToNumberUnitTests.pdb

@@ -15,16 +15,17 @@ namespace StringToNumberUnitTests
     {
         private NumberParser np;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             this.np = new NumberParser();
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void SevenMillionThousand_IsNotValid()
         {
-            Assert.That(this.np.ToLong("seven million thousand"), Is.EqualTo(7000000000));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToLong("seven million thousand"));
         }
 
         public void TwoBillionSixMillion()
@@ -32,10 +33,11 @@ namespace StringToNumberUnitTests
             Assert.That(this.np.ToLong("two billion six million"), Is.EqualTo(2006000000));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void TwoBillionAndSixMillion_IsNotValid()
         {
-            Assert.That(this.np.ToLong("two billion and six million"), Is.EqualTo(2006000000));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToLong("two billion and six million"));
         }
 
         [Test]
@@ -44,18 +46,20 @@ namespace StringToNumberUnitTests
             Assert.That(this.np.ToLong("two trillion and eighteen"), Is.EqualTo(2000000000018));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         [Category("Debatable")]
         public void EightHundredSevenBillion_IsNotValid()
         {
-            Assert.That(this.np.ToLong("eight hundred seven billion"), Is.EqualTo(807000000000));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToLong("eight hundred seven billion"));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         [Category("Debatable")]
         public void ZeroMillion_IsNotValid()
         {
-            Assert.That(this.np.ToLong("zero million"), Is.EqualTo(1000000));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToLong("zero million"));
         }
 
         [Test]

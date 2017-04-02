@@ -15,23 +15,26 @@ namespace StringToNumberUnitTests
     {
         private NumberParser np;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             this.np = new NumberParser();
         }
 
-        [Test, ExpectedException(typeof(OverflowException), ExpectedMessage = "Value was either too large or too small for a UInt64.")]
+        [Test]
         public void MinusOne_IsNotValid()
         {
-            Assert.That(this.np.ToUInt64("minus one"), Is.EqualTo(-1));
+            Assert.Throws(Is.TypeOf<OverflowException>().
+                          And.Message.EqualTo("Value was either too large or too small for a UInt64."),
+                          () => this.np.ToUInt64("minus one"));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         [Category("Debatable")]
         public void MinusZero_IsNotValid()
         {
-            Assert.That(this.np.ToUInt64("minus zero"), Is.EqualTo(-0));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToUInt64("minus zero"));
         }
 
         [Test]

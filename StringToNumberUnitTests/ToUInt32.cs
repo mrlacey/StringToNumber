@@ -15,23 +15,26 @@ namespace StringToNumberUnitTests
     {
         private NumberParser np;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             this.np = new NumberParser();
         }
 
-        [Test, ExpectedException(typeof(OverflowException), ExpectedMessage = "Value was either too large or too small for a UInt32.")]
+        [Test]
         public void MinusOne_IsNotValid()
         {
-            Assert.That(this.np.ToUInt32("minus one"), Is.EqualTo(-1));
+            Assert.Throws(Is.TypeOf<OverflowException>().
+                          And.Message.EqualTo("Value was either too large or too small for a UInt32."),
+                          () => this.np.ToUInt32("minus one"));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         [Category("Debatable")]
         public void MinusZero_IsNotValid()
         {
-            Assert.That(this.np.ToUInt32("minus zero"), Is.EqualTo(-0));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToUInt32("minus zero"));
         }
 
         [Test]
@@ -105,10 +108,12 @@ namespace StringToNumberUnitTests
             Assert.That(this.np.ToUInt32("Four Billion, Two Hundred And Ninety-Four Million, Nine Hundred And Sixty Seven Thousand Two Hundred & Ninety Five"), Is.EqualTo(4294967295));
         }
 
-        [Test, ExpectedException(typeof(OverflowException), ExpectedMessage = "Value was either too large or too small for a UInt32.")]
+        [Test]
         public void FourBillionTwoHundredAndNinetyFourMillionNineHundredAndSixtySevenThousandTwoHundredAndNinetySix_IsNotValid()
         {
-            Assert.That(this.np.ToUInt32("Four Billion, Two Hundred And Ninety-Four Million, Nine Hundred And Sixty Seven Thousand Two Hundred & Ninety Six"), Is.EqualTo(4294967296));
+            Assert.Throws(Is.TypeOf<OverflowException>().
+                          And.Message.EqualTo("Value was either too large or too small for a UInt32."),
+                          () => this.np.ToUInt32("Four Billion, Two Hundred And Ninety-Four Million, Nine Hundred And Sixty Seven Thousand Two Hundred & Ninety Six"));
         }
     }
 }

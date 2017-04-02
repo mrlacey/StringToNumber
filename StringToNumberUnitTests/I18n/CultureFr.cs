@@ -16,16 +16,18 @@ namespace StringToNumberUnitTests.I18n
     {
         private NumberParser np;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             this.np = new NumberParser(Scale.Short, new CultureInfo("fr-FR"));
         }
 
-        [Test, ExpectedException(typeof(OverflowException), ExpectedMessage = "Value was either too large or too small for an unsigned byte.")]
+        [Test]
         public void MinusOne_IsNotValid()
         {
-            Assert.That(this.np.ToByte("moins une"), Is.EqualTo(-1));
+            Assert.Throws(Is.TypeOf<OverflowException>()
+                  .And.Message.EqualTo("Value was either too large or too small for an unsigned byte."),
+                  () => this.np.ToByte("moins une"));
         }
 
         [Test]

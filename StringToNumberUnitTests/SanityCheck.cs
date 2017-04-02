@@ -30,7 +30,7 @@ namespace StringToNumberUnitTests
         private Int64 int64Value;
         private UInt64 uint64Value;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             this.np = new NumberParser(Scale.Short);

@@ -15,16 +15,18 @@ namespace StringToNumberUnitTests
     {
         private NumberParser np;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             this.np = new NumberParser(Scale.Short);
         }
 
-        [Test, ExpectedException(typeof(OverflowException), ExpectedMessage = "Value was either too large or too small for an unsigned byte.")]
+        [Test]
         public void MinusOne_IsNotValid()
         {
-            Assert.That(this.np.ToByte("minus one"), Is.EqualTo(-1));
+            Assert.Throws(Is.TypeOf<OverflowException>()
+                  .And.Message.EqualTo("Value was either too large or too small for an unsigned byte."),
+                  () => this.np.ToByte("minus one"));
         }
 
         [Test]
@@ -57,25 +59,25 @@ namespace StringToNumberUnitTests
             Assert.That(this.np.ToByte("Sixteen"), Is.EqualTo(16));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void SevenTen_IsNotValid()
         {
-            Assert.That(this.np.ToByte("seven ten"), Is.EqualTo(17));
+            Assert.Throws<InvalidCastException>(
+               () => this.np.ToByte("seven ten"));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         [Category("Debatable")]
         public void ZeroFive_IsNotValid()
         {
-            Assert.That(this.np.ToByte("zero five"), Is.EqualTo(5));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToByte("zero five"));
         }
 
         [Test]
         public void TryPass_Five_Passes()
         {
-            byte actual;
-
-            var tryResult = this.np.TryToByte("five", out actual);
+            var tryResult = this.np.TryToByte("five", out byte actual);
 
             Assert.That(tryResult, Is.EqualTo(true));
             Assert.That(actual, Is.EqualTo((byte)5));
@@ -84,18 +86,17 @@ namespace StringToNumberUnitTests
         [Test]
         public void TryPass_ZeroFive_Fails()
         {
-            byte actual;
-
-            var tryResult = this.np.TryToByte("zero five", out actual);
+            var tryResult = this.np.TryToByte("zero five", out byte actual);
 
             Assert.That(tryResult, Is.EqualTo(false));
             Assert.That(actual, Is.EqualTo(default(byte)));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void SevenThirteen_IsNotValid()
         {
-            Assert.That(this.np.ToByte("seven thirteen"), Is.EqualTo(713));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToByte("seven thirteen"));
         }
 
         [Test]
@@ -236,64 +237,75 @@ namespace StringToNumberUnitTests
             Assert.That(this.np.ToByte("two hundred and 55"), Is.EqualTo(255));
         }
 
-        [Test, ExpectedException(typeof(OverflowException), ExpectedMessage = "Value was either too large or too small for an unsigned byte.")]
+        [Test]
         public void TwoHundredAndFiftySix_IsNotValid()
         {
-            Assert.That(this.np.ToByte("two hundred and fifty six"), Is.EqualTo(256));
+            Assert.Throws(Is.TypeOf<OverflowException>().
+                          And.Message.EqualTo("Value was either too large or too small for an unsigned byte."),
+                          () => this.np.ToByte("two hundred and fifty six"));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void UnitSpaceUnit_IsNotValid()
         {
-            Assert.That(this.np.ToByte("five five"), Is.EqualTo(55));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToByte("five five"));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void UnitSpaceD5_IsNotValid()
         {
-            Assert.That(this.np.ToByte("five 5"), Is.EqualTo(55));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToByte("five 5"));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void D5SpaceUnit_IsNotValid()
         {
-            Assert.That(this.np.ToByte("5 five"), Is.EqualTo(55));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToByte("5 five"));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void D5SpaceD5_IsNotValid()
         {
-            Assert.That(this.np.ToByte("5 5"), Is.EqualTo(55));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToByte("5 5"));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void UnitTen_IsNotValid()
         {
-            Assert.That(this.np.ToByte("five ten"), Is.EqualTo(510));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToByte("five ten"));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void UnitUnit_IsNotValid()
         {
-            Assert.That(this.np.ToByte("five six"), Is.EqualTo(56));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToByte("five six"));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void UnitAnd_IsNotValid()
         {
-            Assert.That(this.np.ToByte("five &"), Is.EqualTo(5));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToByte("five &"));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void UnitSingle_IsNotValid()
         {
-            Assert.That(this.np.ToByte("five An"), Is.EqualTo(5));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToByte("five An"));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void UnitNegative_IsNotValid()
         {
-            Assert.That(this.np.ToByte("five Minus"), Is.EqualTo(-5));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToByte("five Minus"));
         }
     }
 }

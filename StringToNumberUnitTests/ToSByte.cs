@@ -15,16 +15,18 @@ namespace StringToNumberUnitTests
     {
         private NumberParser np;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             this.np = new NumberParser();
         }
 
-        [Test, ExpectedException(typeof(OverflowException), ExpectedMessage = "Value was either too large or too small for a signed byte.")]
+        [Test]
         public void MinusOneHundredAndTwentyNine_IsNotValid()
         {
-            Assert.That(this.np.ToSByte("minus one hundred and twenty nine"), Is.EqualTo(-129));
+            Assert.Throws(Is.TypeOf<OverflowException>().
+                          And.Message.EqualTo("Value was either too large or too small for a signed byte."),
+                          () => this.np.ToSByte("minus one hundred and twenty nine"));
         }
 
         [Test]
@@ -33,10 +35,11 @@ namespace StringToNumberUnitTests
             Assert.That(this.np.ToSByte("minus one hundred and twenty eight"), Is.EqualTo(-128));
         }
 
-        [Test, ExpectedException(typeof(InvalidCastException))]
+        [Test]
         public void FiftyTen_IsNotValid()
         {
-            Assert.That(this.np.ToSByte("fifty ten"), Is.EqualTo(5010));
+            Assert.Throws<InvalidCastException>(
+                () => this.np.ToSByte("fifty ten"));
         }
 
         [Test]
@@ -81,10 +84,12 @@ namespace StringToNumberUnitTests
             Assert.That(this.np.ToSByte("one hundred and twenty seven"), Is.EqualTo(127));
         }
 
-        [Test, ExpectedException(typeof(OverflowException), ExpectedMessage = "Value was either too large or too small for a signed byte.")]
+        [Test]
         public void OneHundredAndTwentyEight_IsNotValid()
         {
-            Assert.That(this.np.ToSByte("one hundred and twenty eight"), Is.EqualTo(128));
+            Assert.Throws(Is.TypeOf<OverflowException>().
+                          And.Message.EqualTo("Value was either too large or too small for a signed byte."),
+                          () => this.np.ToSByte("one hundred and twenty eight"));
         }
     }
 }
